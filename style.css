@@ -1,0 +1,26 @@
+body {
+ font-family: Arial, sans-serif;
+ text-align: center;
+ background:#222;
+ color:white;
+}
+
+button {
+ padding:10px 20px;
+ margin:5px;
+ cursor:pointer;
+}
+
+.disclaimer {
+ color:yellow;
+ font-weight:bold;
+}
+
+#coinBox {
+ margin:15px;
+ font-size:18px;
+}
+
+.game {
+ margin-top:20px;
+}

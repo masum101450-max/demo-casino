@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo Simulation Casino</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎮 Demo Simulation Casino</h1>
+
+<p class="disclaimer">
+This is an educational simulation. No real money. No deposits. No withdrawals.
+</p>
+
+<div id="coinBox">
+Virtual Coins: <span id="coins">0</span>
+<button onclick="resetCoins()">Reset Coins</button>
+</div>
+
+<hr>
+
+<div class="menu">
+<button onclick="showGame('slot')">Slot</button>
+<button onclick="showGame('roulette')">Roulette</button>
+<button onclick="showGame('blackjack')">Card Game</button>
+</div>
+
+<hr>
+
+<div id="games">
+
+<div id="slot" class="game">
+<h2>🎰 Slot Game</h2>
+<div id="slotDisplay">🍒 🍋 ⭐</div>
+<button onclick="playSlot()">Spin (Cost: 100)</button>
+<p id="slotResult"></p>
+</div>
+
+<div id="roulette" class="game" style="display:none;">
+<h2>🎯 Roulette</h2>
+Pick Number (0–9):
+<input type="number" id="roulettePick" min="0" max="9">
+<button onclick="playRoulette()">Spin (Cost: 100)</button>
+<p id="rouletteResult"></p>
+</div>
+
+<div id="blackjack" class="game" style="display:none;">
+<h2>♠️ Card Game</h2>
+<button onclick="playBlackjack()">Draw Cards (Cost: 100)</button>
+<p id="blackjackResult"></p>
+</div>
+
+</div>
+
+<script src="js/coins.js"></script>
+<script src="js/slot.js"></script>
+<script src="js/roulette.js"></script>
+<script src="js/blackjack.js"></script>
+
+<script>
+function showGame(name){
+ document.querySelectorAll('.game').forEach(g => g.style.display="none");
+ document.getElementById(name).style.display="block";
+}
+</script>
+
+</body>
+</html>
